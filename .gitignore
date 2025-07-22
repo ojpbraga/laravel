@@ -1,0 +1,39 @@
+# Ignorar dependências PHP de cada projeto
+**/vendor/
+
+# Ignorar dependências JS de cada projeto
+**/node_modules/
+
+# Ignorar arquivos de ambiente
+**/.env
+**/.env.*
+
+# Ignorar cache, logs e arquivos gerados
+**/storage/*.key
+**/storage/app/*
+!**/storage/app/.gitignore
+**/storage/framework/*
+!**/storage/framework/.gitignore
+**/storage/logs/*
+!**/storage/logs/.gitignore
+
+# Ignorar arquivos de cache do Laravel
+**/bootstrap/cache/*.php
+!**/bootstrap/cache/.gitignore
+
+# Ignorar arquivos do Composer
+**/composer.lock
+
+# Ignorar arquivos do NPM/Yarn
+**/package-lock.json
+**/yarn.lock
+
+# Ignorar arquivos do IDE
+**/.vscode/
+**/.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Outros arquivos de sistema
+.DS_Store
+Thumbs.db
