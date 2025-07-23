@@ -6,10 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        $links = [
+            [
+                "path" => "/",
+                "name" => "Home"
+            ],
+            [
+                "path" => "/about",
+                "name" => "About"
+            ],
+            [
+                "path" => "/contact",
+                "name" => "Contact"
+            ]
+        ];
+    ?>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        @foreach ($links as $link)
+            <x-nav-link link="{{$link['path']}}" name="{{$link['name']}}"/>
+        @endforeach
     </nav>
     
     <?php // echo $slot ?>
