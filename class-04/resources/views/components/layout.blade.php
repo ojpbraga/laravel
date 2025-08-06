@@ -17,9 +17,9 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-          <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-          <x-nav-link href="contact" :active="request()->is('contact')">Contact</x-nav-link>
-          <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+          <x-nav-link href="/" :active="request()->is('/')" type="a">Home</x-nav-link>
+          <x-nav-link href="contact" :active="request()->is('contact')" type="a">Contact</x-nav-link>
+          <x-nav-link href="/about" :active="request()->is('about')" type="a">About</x-nav-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -44,10 +44,10 @@
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
                 <div class="space-y-2 py-6">
-                  <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                  <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                  <x-nav-link href="/" :active="request()->is('/')" type="a">Home</x-nav-link>
+                  <x-nav-link href="/contact" :active="request()->is('contact')" type="a">Contact</x-nav-link>
                   <x-nav-link href="/about"
-                  :active="request()->is('about')">About</x-nav-link>
+                  :active="request()->is('about')" type="a">About</x-nav-link>
               </div>
             </div>
           </el-dialog-panel>
@@ -70,8 +70,8 @@
         {{$slot}}
         <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-          <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+          <x-nav-link type="button">Tipo Botao</x-nav-link>
+          <x-nav-link type="a">Tipo Link</x-nav-link>
         </div>
       </div>
     </div>
